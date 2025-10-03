@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro Pessoal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💰 Controle Financeiro Pessoal</h1>
+        
+        <div class="input-section">
+            <label for="salario">Digite seu salário mensal (R$):</label>
+            <input type="number" id="salario" placeholder="Ex: 3000" min="0" step="0.01">
+            <button onclick="calcularOrcamento()">Calcular Orçamento</button>
+        </div>
+
+        <div class="resultados" id="resultados" style="display: none;">
+            <h2>📊 Distribuição do seu Orçamento</h2>
+            
+            <div class="categoria necessidades">
+                <h3>🏠 Necessidades Básicas (55%)</h3>
+                <p>R$ <span id="necessidades">0,00</span></p>
+                <small>Alimentação, moradia, transporte, saúde</small>
+            </div>
+
+            <div class="categoria liberdade">
+                <h3>💎 Liberdade Financeira (15%)</h3>
+                <p>R$ <span id="liberdade">0,00</span></p>
+                <small>Investimentos e poupança</small>
+            </div>
+
+            <div class="categoria educacao">
+                <h3>📚 Educação (10%)</h3>
+                <p>R$ <span id="educacao">0,00</span></p>
+                <small>Cursos, livros, desenvolvimento pessoal</small>
+            </div>
+
+            <div class="categoria estabilidade">
+                <h3>🛡️ Estabilidade (10%)</h3>
+                <p>R$ <span id="estabilidade">0,00</span></p>
+                <small>Reserva de emergência e seguro de vida</small>
+            </div>
+
+            <div class="categoria lazer">
+                <h3>🎯 Lazer (10%)</h3>
+                <p>R$ <span id="lazer">0,00</span></p>
+                <small>Entretenimento, hobbies, diversão</small>
+            </div>
+        </div>
+
+        <div class="sugestoes-investimento" id="sugestoes-investimento" style="display: none;">
+            <h2>💡 Sugestões de Investimento Personalizadas</h2>
+            <p class="perfil-risco">Baseado em seu perfil: <span id="perfil-usuario">Moderado</span></p>
+            <div id="lista-sugestoes">
+                <!-- Sugestões aparecerão aqui -->
+            </div>
+            
+            <div class="dica-extra">
+                <h3>💭 Dica do Especialista</h3>
+                <p id="dica-personalizada">Diversifique seus investimentos para reduzir riscos!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
